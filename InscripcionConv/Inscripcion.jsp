@@ -41,9 +41,9 @@
 		if(document.nuevo.propNombre.value==""){
 			mensaje=mensaje+"\n-) Nombre de la Propuesta";
 		}
-		/*if(document.nuevo.proyectoinv.selectedIndex==0){
+		if(document.nuevo.proyectoinv.selectedIndex==0){
 			mensaje=mensaje+"\n-) Nombre del Proyecto asociado al Plan de Accion del grupo de Investigación";
-		}*/
+		}
 		if(document.nuevo.propDirPro.selectedIndex==0){
 			mensaje=mensaje+"\n-) Nombre del profesor Director del proyecto. (Prof. Planta)";
 		}
@@ -415,7 +415,7 @@
 						<textarea name="propNombre" rows="3" cols="65"></textarea>
 					</td>
 				</tr>
-				<c:if test="${sessionScope.datosConv.convAno!=2013 and sessionScope.datosConv.convNumero!=13}">
+				<c:if test="${sessionScope.datosConv.convAno==2013 }">
 				<tr>
 					<th colspan="2"><b>Nombre del Proyecto ingresado en el Plan de Acción:</b></th>
 				</tr>			
@@ -745,8 +745,7 @@
 							</tr>
 						</c:if>
 					</table>
-
-					<c:if test="${sessionScope.datosConv.convNumero!=5 and sessionScope.datosConv.convNumero!=6 and sessionScope.datosConv.convNumero!=7 and sessionScope.datosConv.convNumero!=9 and sessionScope.datosConv.convNumero!=10 and sessionScope.datosConv.convNumero!=11 and sessionScope.datosConv.convNumero!=12 and sessionScope.datosConv.convNumero!=13}">
+					<c:if test="${sessionScope.datosConv.convAno!=2013}">
 					<table class="tablas" border="0" width="100%">
 					<caption >Rubros financiables por UD y Contrapartida</caption>
 						<tr>

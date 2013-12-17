@@ -209,6 +209,8 @@ public class ProyectosGeneralDB extends BaseDB {
 				proyecto.setFacultad(rs.getString(i++));
 				proyecto.setProyCurricular(rs.getString(i++));
 				proyecto.setDirector(rs.getString(i++));
+				proyecto.setCorreo(rs.getString(i++));
+				proyecto.setCelular(rs.getString(i++));
 				proyecto.setFecAprobacion(rs.getString(i++));
 				proyecto.setNumConvocatoria(rs.getString(i++));
 				proyecto.setConvocatoria(rs.getString(i++));				
@@ -244,7 +246,8 @@ public class ProyectosGeneralDB extends BaseDB {
 				proyecto.setFlag(rs.getInt(i++));
 				proyecto.setTermRefConvo(rs.getString(i++));
 				proyecto.setFecActaFin(rs.getString(i++));
-				proyecto.setIdActaFin(rs.getInt(i++));			
+				proyecto.setIdActaFin(rs.getInt(i++));
+				proyecto.setDocumento(rs.getString(i++));
 				/********************************************/		
 				
 				
@@ -644,7 +647,8 @@ public class ProyectosGeneralDB extends BaseDB {
 				documento.setTipo(rs.getInt(i++));
 				documento.setEstado(rs.getInt(i++));
 				documento.setFechaCarga(rs.getString(i++));
-				documento.setUsuario(rs.getString(i++));				
+				documento.setUsuario(rs.getString(i++));
+				documento.setTipoProyecto(tipoProyecto);
 				lista.add(documento);
 			}
 		} catch (SQLException e) {
